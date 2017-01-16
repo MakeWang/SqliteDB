@@ -3,7 +3,8 @@
 优点：高扩展性，性能与市场上现在比较流行的ormLitem框架速度差不多快，使用简单<br>
 技术点：反射，注解，泛型。</br>
 框架设计模式：单例模式，简单工程模式，模板模式。</br>
-
+注意： 1、修饰符必须是public，不然反射不到</br>
+      2、数据必须用对象，如果说int类型数据必须写成Integer，不然在加载的时候int是有默认值为0</br>
 # 使用
 ```java
   IBaseDao<UserInfo> dao = BaseDaoFactory.getInstance().getDataHelper(UserInfoDAO.class,UserInfo.class);
